@@ -1,0 +1,63 @@
+@use "global" as *;
+.contentsBox2 .swiper-pagination-bullet-active {
+  background: rgba(249, 248, 113, 1);
+}
+
+.contentsBox2 .mySwiper1 {
+  display: block;
+}
+
+.contentsBox2 .swiper-pagination {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.contentsBox2 .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+.contentsBox2 .swiper-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.contentsBox2 .swiper-slide::before {
+  content: "";
+  display: block;
+  width: rem(375);
+  padding-top: calc(261 / 375 * 100%);
+}
+
+.contentsBox2 .swiper-slide img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contentsBox2 .swiper-pagination__content {
+  display: block;
+  height: rem(25);
+  // background: rgba(255, 105, 180, 1);
+  background: rgba(51, 51, 51, 1);
+  position: relative;
+  @include mq(md) {
+    background: transparent;
+  }
+}
+
+.contentsBox2
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  // .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal.swiper-pagination-bullets-dynamic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: initial;
+  transform: translate(-50%, -50%);
+}
+
+.contentsBox2 .contentsBox2__swiper {
+  @include mq(md) {
+  }
+}
